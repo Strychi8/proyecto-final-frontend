@@ -1,0 +1,108 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+/** Header **/
+header h1 {
+    color: #491404;
+    font-size: 20px;
+    display: inline;
+}
+
+header nav {
+    display: inline-flex;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav li {
+    display: flex;
+}
+
+header a {
+    color: #491404;
+    text-decoration: none;
+}
+
+header i {
+    color: #491404;
+}
+
+header {
+    background-color: #DBB88E;
+    padding: 2rem;
+}
+
+/** Main **/
+
+main {
+    background-color: #DBB88E;
+    padding: 2rem;
+}
+
+main h2 {
+    color: #491404;
+}
+
+/** Seccion Productos **/
+#productos img {
+    width: 250px;
+    height: 250px;
+}
+
+#productos p {
+    display: flex;
+    justify-content: center;
+}
+
+#productos h3 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/** Footer **/
+#footerNav ul {
+    list-style: none;
+}
+
+footer a {
+  color: #DBB88E;
+  text-decoration: none;
+}
+
+footer {
+    background-color: #491404;
+    color: #DBB88E;
+    padding: 2rem;
+}
+
+body header, footer{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer > h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body main {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

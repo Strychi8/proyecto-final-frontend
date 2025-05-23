@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Inicio</title>
+
+</head>
+<body>
+    <header>
+       <img src="images/logo-cafe.jpg" alt="Logo de Cafe" width="170" height="150">
+       <h1>Cafeteria Strychi</h1>
+       <nav id="headerNav"> 
+        <ul class="nav-list">
+         <li><a href="#">Inicio</a></li>
+         <li><a href="#">Nosotros</a></li>
+         <li><a href="#">Productos</a></li>
+         <li><a href="#">Reseñas</a></li>
+         <li><a href="#">Contacto</a></li>
+         <i class="fas fa-shopping-cart"></i> <!-- Icono de carrito de compras -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Explora nuestra variedad de productos de cafe</h2>
+        <img src="images/vista-maquina-cafe.avif" alt="Foto de una taza de cafe y una maquina de cafe en un hogar acogedor">
+        
+        <h2>Musica para los amantes del cafe</h2>
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/m6SOJlkN1zU?si=wChkOLoOTOXZiiui" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+        ></iframe>
+
+        <h2>Preparacion de un capuccino en 5 pasos sencillos</h2>
+        <video 
+            controls 
+            muted 
+            width="600" 
+            height="400">
+            <source src="media/video.mp4" type="video/mp4">
+            <track src="media/spanish.vtt" kind="subtitles" srclang="es" label="Español" default>
+            <track src="media/english.vtt" kind="subtitles" srclang="en" label="Ingles">
+        </video>
+      </section>
+      
+      <section>
+         <h2>Productos</h2>
+         <div id="productos">
+            <div>
+               <img src="images/cafe-molido-lavirginia.jpg" alt="Foto de un paquete de cafe molido La Virginia">
+               <h3>Cafe Molido La Virginia</h3>
+               <p>$15000</p>
+            </div>
+            <div>
+               <img src="images/cafe-torrado-cabrales.jpg" alt="Foto de un paquete de cafe torrado Cabrales">
+               <h3>Cafe Torrado Cabrales</h3>
+               <p>$15000</p>
+            </div>
+            <div class="morenitaCafe">
+               <img src="images/cafe-torrado-morenita-intenso.jpg" alt="Foto de un paquete de cafe molido Morenita">
+               <h3>Cafe Torrado Molido Morenita</h3>
+               <p>$17.200</p>
+            </div>
+            <div>
+               <img src="images/morenita-tostado-colombia.jpg" alt="Foto de un paquete de cafe tostado Colombia molido">
+               <h3>Café Tostado Colombia Molido</h3>
+               <p>$13000</p>
+            </div>
+            <div>
+               <img src="images/molino-de-cafe.webp" alt="Foto de un paquete de cafe molido La Virginia">
+               <h3>Molino de Cafe</h3>
+               <p>$80000</p>
+            </div>
+            <div>
+               <img src="images/cafetera-hudson-aluminio-italiana-black.webp" alt="Foto de una cafetera Hudson italiana de aluminio negro">
+               <h3>Cafetera Hudson Italiana</h3>
+               <p>$26500</p>
+            </div>
+            <div>
+               <img src="images/cafetera-oster.webp" alt="Foto de una cafetera Oster color negro">
+               <h3>Cafetera Oster Color Negro</h3>
+               <p>$30800</p>
+            </div>
+            <div>
+               <img src="images/maquina-de-espresso.jpg" alt="Foto de una maquina de expresso">
+               <h3>Maquina de Expresso</h3>
+               <p>$170300</p>
+            </div>
+         </div>     
+      </section>
+
+      <section>
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/xkgjlnkl" method="POST">
+         <div>
+          <label for="">Nombre</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+         </div>
+         <div>
+          <label for="">Apellido</label>
+          <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required>
+         </div>
+         <div>
+          <label for="">Correo electronico</label>
+          <input type="email" name="email" id="email" placeholder="Escribe tu email" required>
+         </div>
+         <div>
+          <label for="">Mensaje</label>
+          <textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje" required></textarea>
+         </div>
+          <button type="submit">Enviar</button>
+       </form>
+      </section>
+    </main>
+
+    <footer>
+      <h2>Ubicacion de nuestra tienda</h2>
+      <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.114240949857!2d-58.3945837!3d-34.  7022984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd5684873007%3A0x1134010c9a849ac4!2sThe%20Coffee%20Store%20Lan%C3%BAs!5e0!3m2!1ses!2sar!4v1745969355302!5m2!1ses!2sar" 
+         width="800" 
+         height="400" 
+         style="border:0;" 
+         allowfullscreen="" 
+         loading="lazy" 
+         referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      
+      <div>
+        <h3>Seguinos</h3>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-pinterest"></i>
+      </div>
+      
+      <nav id="footerNav">
+        <h3>Cafeteria Strychi</h3>
+        
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+         </ul>
+      </nav>
+
+      <p>@ Todos los derechos reservados 2025</p>
+    </footer>
+    
+</body>
+</html>
