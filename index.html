@@ -8,34 +8,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Inicio</title>
+    <link rel="icon" href="images/coffe-icon.png" type="image/png">
+    <title>Cafeteria Strychi</title>
 
 </head>
 <body>
     <header>
-       <img src="images/logo-cafe.jpg" alt="Logo de Cafe" width="170" height="150">
-       <h1>Cafeteria Strychi</h1>
-       <nav id="headerNav"> 
-        <ul class="nav-list">
-         <li><a href="#">Inicio</a></li>
-         <li><a href="#">Nosotros</a></li>
-         <li><a href="#">Productos</a></li>
-         <li><a href="#">Reseñas</a></li>
-         <li><a href="#">Contacto</a></li>
-         <i class="fas fa-shopping-cart"></i> <!-- Icono de carrito de compras -->
-        </ul>
-      </nav>
+         <img class="img-header" src="images/logo-cafe.jpg" alt="Logo de Cafe">
+         <h1>Cafeteria Strychi</h1>
+         <nav class="headerNav"> 
+            <ul class="nav-list">
+               <li class="clase-inicio"><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></li>
+               <li class="clase-productos"><a href="#productos"><i class="fa-solid fa-mug-hot"></i> Productos</a></li>
+               <li class="clase-resenias"><a href="#resenias"><i class="fa-solid fa-pen"></i> Reseñas</a></li>
+               <li class="clase-contacto"><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+               <li class="clase-carrito"><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Icono de carrito de compras -->
+            </ul>
+         </nav>
     </header>
 
     <main>
-      <section>
-        <h2>Explora nuestra variedad de productos de cafe</h2>
-        <img src="images/vista-maquina-cafe.avif" alt="Foto de una taza de cafe y una maquina de cafe en un hogar acogedor">
-        
-        <h2>Musica para los amantes del cafe</h2>
+      <a id="nosotros"></a>
+      <section class="secciones-nosotros">
+         <div class="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>En 2025, Cafeteria Strychi nació del sueño de Tomas Strycharski de crear un espacio donde la comunidad pudiera disfrutar de los mejores granos de café, tostados con pasión y servidos con amor. Desde entonces, hemos crecido, pero nuestra dedicación a la excelencia y al arte de hacer café permanece inquebrantable.</p>
+         </div>
+      </section>
+
+
+      <section class="secciones-media">
+        <h2> Tu playlist ideal para esos momentos de café y calma <h2>
         <iframe 
-            width="560" 
-            height="315" 
+            width="360" 
+            height="315"
             src="https://www.youtube.com/embed/m6SOJlkN1zU?si=wChkOLoOTOXZiiui" 
             title="YouTube video player" 
             frameborder="0" 
@@ -45,121 +51,298 @@
         ></iframe>
 
         <h2>Preparacion de un capuccino en 5 pasos sencillos</h2>
-        <video 
-            controls 
-            muted 
-            width="600" 
-            height="400">
-            <source src="media/video.mp4" type="video/mp4">
-            <track src="media/spanish.vtt" kind="subtitles" srclang="es" label="Español" default>
-            <track src="media/english.vtt" kind="subtitles" srclang="en" label="Ingles">
-        </video>
+        <div class="video-container">
+            <video
+               controls 
+                muted 
+                >
+               <source src="media/video.mp4" type="video/mp4">
+               <track src="media/spanish.vtt" kind="subtitles" srclang="es" label="Español" default>
+               <track src="media/english.vtt" kind="subtitles" srclang="en" label="Ingles">
+            </video>
+         </div>
       </section>
       
-      <section>
+      <!-- Productos -->
+      <a id="productos"></a>
+      <section class="secciones-producto">
          <h2>Productos</h2>
-         <div id="productos">
-            <div>
-               <img src="images/cafe-molido-lavirginia.jpg" alt="Foto de un paquete de cafe molido La Virginia">
-               <h3>Cafe Molido La Virginia</h3>
-               <p>$15000</p>
+         <div class="productos">
+            <div class="producto">
+               <img src="images/productos/cafe-molido-lavirginia.jpg" alt="Foto de un paquete de cafe molido La Virginia">
+               <div class="producto-contenido">
+                  <h3>Cafe Molido La Virginia</h3>
+                  <span>$15000</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div>
-               <img src="images/cafe-torrado-cabrales.jpg" alt="Foto de un paquete de cafe torrado Cabrales">
-               <h3>Cafe Torrado Cabrales</h3>
-               <p>$15000</p>
+            <div class="producto">
+               <img src="images/productos/cafe-torrado-cabrales.jpg" alt="Foto de un paquete de cafe torrado Cabrales">
+               <div class="producto-contenido">
+                  <h3>Cafe Torrado Cabrales</h3>
+                  <span>$15000</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div class="morenitaCafe">
-               <img src="images/cafe-torrado-morenita-intenso.jpg" alt="Foto de un paquete de cafe molido Morenita">
-               <h3>Cafe Torrado Molido Morenita</h3>
-               <p>$17.200</p>
+            <div class="producto">
+               <img src="images/productos/cafe-torrado-morenita-intenso.jpg" alt="Foto de un paquete de cafe molido Morenita">
+               <div class="producto-contenido">
+                  <h3>Cafe Torrado Molido Morenita</h3>
+                  <span>$17.200</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div>
-               <img src="images/morenita-tostado-colombia.jpg" alt="Foto de un paquete de cafe tostado Colombia molido">
-               <h3>Café Tostado Colombia Molido</h3>
-               <p>$13000</p>
+            <div class="producto">
+               <img src="images/productos/morenita-tostado-colombia.jpg" alt="Foto de un paquete de cafe tostado Colombia molido">
+               <div class="producto-contenido">
+                  <h3>Café Tostado Colombia Molido</h3>
+                  <span>$13000</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div>
-               <img src="images/molino-de-cafe.webp" alt="Foto de un paquete de cafe molido La Virginia">
-               <h3>Molino de Cafe</h3>
-               <p>$80000</p>
+            <div class="producto">
+               <img src="images/productos/molino-de-cafe.webp" alt="Foto de un paquete de cafe molido La Virginia">
+               <div class="producto-contenido">
+                  <h3>Molino de Cafe</h3>
+                  <span>$80000</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div>
-               <img src="images/cafetera-hudson-aluminio-italiana-black.webp" alt="Foto de una cafetera Hudson italiana de aluminio negro">
-               <h3>Cafetera Hudson Italiana</h3>
-               <p>$26500</p>
+            <div class="producto">
+               <img src="images/productos/cafetera-hudson-aluminio-italiana-black.webp" alt="Foto de una cafetera Hudson italiana de aluminio negro">
+               <div class="producto-contenido">
+                  <h3>Cafetera Hudson Italiana</h3>
+                  <span>$26500</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div>
-               <img src="images/cafetera-oster.webp" alt="Foto de una cafetera Oster color negro">
-               <h3>Cafetera Oster Color Negro</h3>
-               <p>$30800</p>
+            <div class="producto">
+               <img src="images/productos/cafetera-oster.webp" alt="Foto de una cafetera Oster color negro">
+               <div class="producto-contenido">
+                  <h3>Cafetera Oster Color Negro</h3>
+                  <span>$30800</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
-            <div>
-               <img src="images/maquina-de-espresso.jpg" alt="Foto de una maquina de expresso">
-               <h3>Maquina de Expresso</h3>
-               <p>$170300</p>
+            <div class="producto">
+               <img src="images/productos/maquina-de-espresso.jpg" alt="Foto de una maquina de expresso">
+               <div class="producto-contenido">
+                  <h3>Maquina de Expresso</h3>
+                  <span>$170300</span>
+                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="detalle">Ver detalles</button>
+               </div>
             </div>
          </div>     
       </section>
-
-      <section>
-        <h2>Contacto</h2>
-        <form action="https://formspree.io/f/xkgjlnkl" method="POST">
-         <div>
-          <label for="">Nombre</label>
-          <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
-         </div>
-         <div>
-          <label for="">Apellido</label>
-          <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required>
-         </div>
-         <div>
-          <label for="">Correo electronico</label>
-          <input type="email" name="email" id="email" placeholder="Escribe tu email" required>
-         </div>
-         <div>
-          <label for="">Mensaje</label>
-          <textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje" required></textarea>
-         </div>
-          <button type="submit">Enviar</button>
-       </form>
+      
+      <!-- Reseñas -->
+      <a id="resenias"></a>
+      <section class="secciones-resenia">
+         <h2>Reseñas</h2>
+         <div class="resenias">
+            <div class="card">
+                <img src="images/resenias/resenia1.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Alvaro Acosta</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">14/6/2025</span>
+                  </div>
+                  <p>Una experiencia de compra de lujo gracias a la calidad de sus productos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia2.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Federico Mendez</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">4/3/2025</span>
+                  </div>
+                  <p>¡Excelente inversión! Compré esta máquina de espresso hace 2 años y sigue funcionando a la perfección, como el primer día.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia3.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Sofia Pio</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">12/5/2025</span>
+                  </div>
+                  <p>El servicio al cliente es de primera. Tuve una duda con mi pedido y me respondieron casi al instante.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia4.avif" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Leonel Saif</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">10/6/2025</span>
+                  </div>
+                  <p>Los productos son de una calidad insuperable. Compré el paquete de La Virginia clasico y se siente la diferencia con otras cafeterias.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia5.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Belen Sanchez</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">20/6/2025</span>
+                  </div>
+                  <p>¡Me encantó la combinación! Compré un set de tazas de café y un par de granos especiales.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia6.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Carlos Lopez</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">24/4/2025</span>
+                  </div>
+                  <p>¡Qué puedo decir! Un auténtico manjar. La calidad y el sabor son excepcionales, me dejó sin palabras. Totalmente recomendado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia7.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Kim Lee</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">23/1/2025</span>
+                  </div>
+                  <p>Como verdadera adicta al café y todas sus variantes, debo decir que ¡esta página es mi paraíso!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/resenias/resenia8.jpg" alt="">
+                <div class="card-content">
+                  <div>
+                      <span class="card-nombre">Ian Weber</span><br>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><br>
+                      <span class="card-fecha">20/6/2025</span>
+                  </div>
+                  <p>Realmente impresionado con la calidad general de los productos. Pero tengo que destacar el café: es realmente de otro nivel.</p>
+                </div>
+            </div>
+         </div>     
+      </section>
+      
+      <!-- Contacto -->
+      <a id="contacto"></a>
+      <section class="secciones-contacto">        
+            <form class="formContacto" action="https://formspree.io/f/xkgjlnkl" method="POST">
+               <h2>Contacto</h2>
+               <div class="inlineForm">
+                  <label for="">Nombre: </label>
+                  <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+               </div>
+               <div class="inlineForm">
+                  <label for="">Apellido: </label>
+                  <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required>
+               </div>
+               <div class="inlineForm">
+                  <label for="">Correo electronico: </label>
+                  <input type="email" name="email" id="email" placeholder="Escribe tu email" required>
+               </div>
+               <div class="inlineForm">
+                  <label for="">Mensaje: </label>
+                  <textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje" required></textarea>
+               </div>
+               <button class="btn" type="submit">Enviar</button>
+            </form>
       </section>
     </main>
 
-    <footer>
-      <h2>Ubicacion de nuestra tienda</h2>
-      <iframe 
-         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.114240949857!2d-58.3945837!3d-34.  7022984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd5684873007%3A0x1134010c9a849ac4!2sThe%20Coffee%20Store%20Lan%C3%BAs!5e0!3m2!1ses!2sar!4v1745969355302!5m2!1ses!2sar" 
-         width="800" 
-         height="400" 
-         style="border:0;" 
-         allowfullscreen="" 
-         loading="lazy" 
-         referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+   <footer>
+      <div class="footer-contenido">
+         <h2>Nuestra sucursal</h2>
+         <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.114240949857!2d-58.3945837!3d-34.  7022984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd5684873007%3A0x1134010c9a849ac4!2sThe%20Coffee%20Store%20Lan%C3%BAs!5e0!3m2!1ses!2sar!4v1745969355302!5m2!1ses!2sar"
+            style="border:0;" 
+            width="360" 
+            height="315"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+         ></iframe>
+          
+         <div class="footer-contenido-interno">
+         <nav class="footerNav">
+            <h3>Cafeteria Strychi</h3>
+            <ul>
+               <li><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></li>
+               <li><a href="#productos"><i class="fa-solid fa-mug-hot"></i> Productos</a></li>
+               <li><a href="#resenias"><i class="fa-solid fa-pen"></i> Reseñas</a></li>
+               <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            </ul>
+         </nav>
       
-      <div>
-        <h3>Seguinos</h3>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-pinterest"></i>
-      </div>
-      
-      <nav id="footerNav">
-        <h3>Cafeteria Strychi</h3>
-        
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contacto</a></li>
-         </ul>
-      </nav>
+           <div class="redes">
+              <h3>Seguinos</h3>
+              <ul>
+                 <a href="https://www.linkedin.com/in/tomas-strycharski-9a369021a" target="_blank">
+                 <li><i class="fa-brands fa-linkedin"></i> Cafeteria Strychi</li>
+                 </a>
+                 <a href="https://www.instagram.com/" target="_blank">
+                 <li><i class="fa-brands fa-instagram"></i> cafeteriaStrychi</li>
+                 </a>
+                 <a href="https://x.com/?lang=es" target="_blank">
+                 <li><i class="fa-brands fa-x-twitter"></i> La Cafeteria Strychi</li>
+                 </a>
+                 <a href="https://ar.pinterest.com/" target="_blank">
+                 <li><i class="fa-brands fa-pinterest"></i> Cafeteria Strychi</li>
+                 </a>
+              </ul>
+           </div>
+        </div>
+      </div> 
 
-      <p>@ Todos los derechos reservados 2025</p>
-    </footer>
+       <p>Todos los derechos reservados &copy; Cafeteria Strychi 2025.</p>
+   </footer>
     
 </body>
 </html>

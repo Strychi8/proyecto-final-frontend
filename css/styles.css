@@ -1,92 +1,20 @@
 
+/** General **/
+
 html {
     scroll-behavior: smooth;
 }
 
-/** Header **/
-header h1 {
-    color: #491404;
-    font-size: 20px;
-    display: inline;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header nav {
-    display: inline-flex;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-header nav li {
-    display: flex;
-}
-
-header a {
-    color: #491404;
-    text-decoration: none;
-}
-
-header i {
-    color: #491404;
-}
-
-header {
-    background-color: #DBB88E;
-    padding: 2rem;
-}
-
-/** Main **/
-
-main {
-    background-color: #DBB88E;
-    padding: 2rem;
-}
-
-main h2 {
-    color: #491404;
-}
-
-/** Seccion Productos **/
-#productos img {
-    width: 250px;
-    height: 250px;
-}
-
-#productos p {
-    display: flex;
-    justify-content: center;
-}
-
-#productos h3 {
-    display: flex;
-    justify-content: center;
-    
-}
-
-#productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-/** Footer **/
-#footerNav ul {
-    list-style: none;
-}
-
-footer a {
-  color: #DBB88E;
-  text-decoration: none;
-}
-
-footer {
-    background-color: #491404;
-    color: #DBB88E;
-    padding: 2rem;
+h2 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 35px;
 }
 
 body header, footer{
@@ -95,14 +23,416 @@ body header, footer{
     font-style: normal;
 }
 
-footer > h2 {
+/** Responsivo **/
+
+video {
+    width: 80%;
+    max-width: 960px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+iframe {
+    width: 80%;
+    height: 350px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/** Anclas **/
+
+#inicio, #productos, #resenias, #contacto {
+    position: relative;
+    top: -6rem;
+}
+
+/** Header **/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #DBB88E;
+    color: #491404;
+    padding: 10px 20px;
+    background-image: url(../images/vector-fondo-patron-granos-cafe.avif);
+    background-size: contain;
+}
+
+.img-header {
+   height: 60px;
+   width: auto;
+   padding: 8.5px;
+   transition: 0.3s;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+header h1:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.headerNav {
+    height: 50px;
+    padding: 5px 10%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.clase-inicio:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.clase-nosotros:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.clase-productos:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.clase-resenias:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.clase-contacto:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.clase-carrito:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #491404;
+}
+
+/** Main **/
+
+main {
+    background-color: #DBB88E;
+    padding: 6rem;
+    margin: auto;
+}
+
+main h2 {
+    color: #491404;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/** Seccion Media **/
+
+.secciones-media h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/** Seccion Sobre Nosotros **/
+
+.secciones-nosotros {
+    background-image: url(../images/cafeteria-patrones-fisuras.avif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+}
+.sobre-nosotros {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid brown;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.sobre-nosotros p {
+    font-style: italic;
+    font-size: 25px;
+    color:#742812;
+    text-align: center;
+}
+
+.sobre-nosotros h2 {
+    font-size: 30px;
+}
+
+/** Seccion Productos **/
+
+.secciones-producto {
+   padding: 2rem 1rem;
+}
+
+.producto img {
+    background-color: #DBB88E;
+    height: 15rem;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+.productos {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.producto {
+    background-color: #491404;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.producto-contenido {
+    display: flex;
+    flex-direction: column;
+    color: #DBB88E;
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.producto-contenido h3 {
+    margin-bottom: 15px; 
+}
+
+.producto-contenido span {
+    font-size: 1.1em;
+    margin-bottom: 15px; 
+}
+
+.producto-contenido .agregar-producto {
+    background-color: #00A95B;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid #00A95B;
+    cursor: pointer;
+}
+
+.producto-contenido .detalle {
+    background-color: white;
+    color: #685237;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/** Seccion Contacto **/
+
+.secciones-contacto {
+    margin-top: 4rem;   
+}
+
+.formContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#ebe7e6;
+    color: #742812;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px #742812;
+    width: 60%;
+    margin: auto;
+}
+
+.formContacto .inlineForm {
+    margin: 10px;
+}
+
+.inlineForm label {
     font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 
-body main {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.inlineForm input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #DBB88E;
 }
+
+.inlineForm textarea {
+    resize: none;
+    padding: 10px;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #DBB88E;
+}
+
+.btn {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color:#e0aa67;
+    color:#fcfbfb;
+    border: solid transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: background-color 0.3s, transform 0.3s;
+    background-color: #742812;
+    transform: scale(1.2);
+}
+
+/** Seccion Reseñas **/
+
+.resenias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    place-items: center;
+    padding: 1rem; 
+}
+
+.card {
+    display: flex;
+    background-color:#ebe7e6;
+    color: #cca370;
+    border-radius: 10px;
+    position: relative; /** ver esto**/
+    width: 15rem;
+    margin: 2rem;
+    padding: 2rem 1rem 0;
+    justify-content: center;
+    box-shadow: 10px 10px 10px #491404;
+    transition: transform 0.2s ease-out;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card img {
+    position: absolute; /** ver esto **/
+    align-items: center;
+    top: -2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 15px;
+}
+
+.card-content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card-nombre {
+    font-weight:700;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.card .fa-solid {
+    color: rgb(255, 217, 0);
+}
+
+.card-fecha {
+    font-size: 0.7rem;
+}
+
+.card-content p {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/** Footer **/
+
+footer {
+    background-color: #491404;
+    color: #DBB88E;
+    padding: 2rem 4rem;
+    margin-top: auto;
+}
+
+.footerNav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+footer a {
+   color: #DBB88E;
+   text-decoration: none;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-contenido h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-contenido-interno {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.redes ul {
+    list-style: none;   
+    margin-top: 20px;
+}
+
+/** Media Queries **/
+
+
