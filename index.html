@@ -14,15 +14,17 @@
 </head>
 <body>
     <header>
-         <img class="img-header" src="images/logo-cafe.jpg" alt="Logo de Cafe">
+         <img class="logo" src="images/logo-cafe.jpg" alt="Logo de Cafe">
          <h1>Cafeteria Strychi</h1>
-         <nav class="headerNav"> 
+         <button class="abrir-menu" id="abrir"><i class="fa-solid fa-bars"></i></button>
+         <nav class="nav" id="nav"> 
+            <button class="cerrar-menu" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
             <ul class="nav-list">
-               <li class="clase-inicio"><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></li>
-               <li class="clase-productos"><a href="#productos"><i class="fa-solid fa-mug-hot"></i> Productos</a></li>
-               <li class="clase-resenias"><a href="#resenias"><i class="fa-solid fa-pen"></i> Reseñas</a></li>
-               <li class="clase-contacto"><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-               <li class="clase-carrito"><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Icono de carrito de compras -->
+               <li><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></li>
+               <li><a href="#productos"><i class="fa-solid fa-mug-hot"></i> Productos</a></li>
+               <li><a href="#resenias"><i class="fa-solid fa-pen"></i> Reseñas</a></li>
+               <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+               <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Icono de carrito de compras -->
             </ul>
          </nav>
     </header>
@@ -343,6 +345,6 @@
 
        <p>Todos los derechos reservados &copy; Cafeteria Strychi 2025.</p>
    </footer>
-    
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

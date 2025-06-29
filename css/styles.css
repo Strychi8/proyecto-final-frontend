@@ -23,7 +23,7 @@ body header, footer{
     font-style: normal;
 }
 
-/** Responsivo **/
+/** Media **/
 
 video {
     width: 80%;
@@ -69,11 +69,8 @@ header {
     background-size: contain;
 }
 
-.img-header {
-   height: 60px;
-   width: auto;
-   padding: 8.5px;
-   transition: 0.3s;
+.logo {
+    max-width: 5rem;
 }
 
 header h1 {
@@ -86,41 +83,10 @@ header h1:hover {
     cursor: pointer;
 }
 
-.headerNav {
-    height: 50px;
+.nav {
     padding: 5px 10%;
     font-weight: bold;
     font-size: 20px;
-}
-
-.clase-inicio:hover {
-    transition: transform 0.2s ease-out;
-    transform: translateY(-10px);
-}
-
-.clase-nosotros:hover {
-    transition: transform 0.2s ease-out;
-    transform: translateY(-10px);
-}
-
-.clase-productos:hover {
-    transition: transform 0.2s ease-out;
-    transform: translateY(-10px);
-}
-
-.clase-resenias:hover {
-    transition: transform 0.2s ease-out;
-    transform: translateY(-10px);
-}
-
-.clase-contacto:hover {
-    transition: transform 0.2s ease-out;
-    transform: translateY(-10px);
-}
-
-.clase-carrito:hover {
-    transition: transform 0.2s ease-out;
-    transform: translateY(-10px);
 }
 
 .nav-list {
@@ -129,9 +95,19 @@ header h1:hover {
     gap: 2rem;
 }
 
-header a {
+.nav-list li a {
     text-decoration: none;
     color: #491404;
+}
+
+.nav-list li:hover {
+    transition: transform 0.2s ease-out;
+    transform: translateY(-10px);
+}
+
+.abrir-menu, 
+.cerrar-menu {
+    display: none;
 }
 
 /** Main **/
@@ -152,7 +128,6 @@ main h2 {
 
 .secciones-media h2{
     margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 
 /** Seccion Sobre Nosotros **/
@@ -183,10 +158,6 @@ main h2 {
     font-size: 25px;
     color:#742812;
     text-align: center;
-}
-
-.sobre-nosotros h2 {
-    font-size: 30px;
 }
 
 /** Seccion Productos **/
@@ -228,8 +199,7 @@ main h2 {
     flex-direction: column;
     color: #DBB88E;
     text-align: center;
-    padding: 15px;
-    
+    padding: 15px;   
 }
 
 .producto-contenido h3 {
@@ -435,4 +405,157 @@ footer p {
 
 /** Media Queries **/
 
+/* Estilos para pantallas pequeñas (menos de 600px) */
 
+@media screen and (max-width: 600px){
+    .abrir-menu, 
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #742812;
+    }
+
+    .cerrar-menu {
+        color: #742812;
+    }
+
+    header {
+        position: static;
+    }
+
+    header h1:hover {
+        transition: none;
+        transform: none;
+        cursor: pointer;
+    } 
+ 
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        bottom: 0;
+        background-color:#cca370;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a {
+        color:#742812;
+    }
+    /* Sobre nosotros */
+    .sobre-nosotros p {
+        font-style: normal;
+        font-size: 20px;
+        color:#685237;
+        text-align: center;
+    }
+    /* Media */
+    iframe {
+        height: 200px; 
+    }
+    /* Main */
+    main {
+        padding: 2rem;
+    }
+    main h2 {
+        margin-bottom: 1rem;
+        font-size: 25px;
+    }
+    /* Productos */
+    .secciones-producto {
+        padding: 1rem;
+    }
+    .productos {
+        margin-top: 1rem;
+        padding: 1rem;
+        max-width: 300px;
+    }
+    /* Contacto */
+    .secciones-contacto {
+        margin-top: 2rem;
+        margin-bottom: 2rem;   
+    }
+
+    .formContacto {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    /* Footer */
+    .footer-contenido h2 {
+        font-size: 25px;
+    }
+    .footer-contenido-interno {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Estilos para pantallas medianas (menos de 768px) */
+
+@media only screen and (max-width: 768px) {
+    
+    .logo {
+        max-width: 4rem;
+    }
+
+    header h1 {
+        font-size: 17px;
+    }
+
+    .nav {
+        padding: 5px 10%;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    main {
+        padding: 2rem;
+        margin: auto;
+    }
+
+    main h2 {
+        color: #491404;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 25px;
+    }
+
+    .sobre-nosotros p {
+        font-style: normal;
+        font-size: 20px;
+        color:#685237;
+        text-align: center;
+    }
+
+    .secciones-contacto {
+        margin-top: 2rem;
+        margin-bottom: 2rem;   
+    }
+
+    .formContacto {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+}
