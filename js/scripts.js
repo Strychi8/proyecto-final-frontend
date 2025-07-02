@@ -11,9 +11,10 @@ cerrar.addEventListener("click", () => {
 })
 
 const listaProductos = document.querySelector("#listaProductos");
-const contenidoProductos = document.querySelector("#contentProducts");
+const contenidoProductos = document.querySelector("#contenidoProductos");
+const vaciarCarrito = document.querySelector("#vaciarCarrito");
 
-let productsArray = [];
+let productosArray = [];
 
 document.addEventListener('DOMContentLoaded', function (){
     eventListeners();
@@ -21,17 +22,33 @@ document.addEventListener('DOMContentLoaded', function (){
 
 function eventListeners(){
     listaProductos.addEventListener("click", getDataElements);
+    vaciarCarrito.addEventListener("click", function(){
+        // console.log("Clicked");
+        productosArray = [];
+        productosHtml();
+        actualizacionContadorCarrito();
+        actualizarTotal();
+    })
+
+    const cargarProducto = localStorage.getItem("productos");
+    if (cargarProducto){
+        productosArray = JSON.parse(cargarProducto);
+        productosHtml();
+        actualizacionContadorCarrito();
+        actualizarTotal();
+    } else {
+        productosArray = [];
+    }
 }
 
 function actualizacionContadorCarrito(){
-    const contadorCarrito = document.querySelector("#cartCount");
-    contadorCarrito.textContent = productsArray.length;
-
+    const contadorCarrito = document.querySelector("#contadorCarrito");
+    contadorCarrito.textContent = productosArray.length;
 }
 
 function actualizarTotal(){
     const total = document.querySelector("#total");
-    let totalProductos = productsArray.reduce((total, producto) => total + producto.price * producto.quantity, 0);
+    let totalProductos = productosArray.reduce((total, producto) => total + producto.price * producto.quantity, 0);
     total.textContent = `$${totalProductos.toFixed(3)}`;
 }
 
@@ -52,7 +69,7 @@ function selectData(producto){
         quantity: 1
     }
 
-    const exists = productsArray.some(producto => producto.id === productoObjeto.id);
+    const exists = productosArray.some(producto => producto.id === productoObjeto.id);
 
     if (exists){
         showAlert("El producto ya existe en el carrito", "error");
@@ -60,17 +77,17 @@ function selectData(producto){
     }
 
     // console.log(productoObjeto)
-    productsArray = [...productsArray, productoObjeto];
+    productosArray = [...productosArray, productoObjeto];
     showAlert("El producto fue agregado a su carrito", "success");
-    //console.log(productsArray);
-    productsHtml();
+    //console.log(productosArray);
+    productosHtml();
     actualizacionContadorCarrito();
     actualizarTotal()
 }
 
-function productsHtml(){
+function productosHtml(){
     cleanHtml();
-    productsArray.forEach(producto => {
+    productosArray.forEach(producto => {
         const { img, title, price, quantity, id } = producto;
 
         const tr = document.createElement("tr");
@@ -105,7 +122,7 @@ function productsHtml(){
         const prodDelete = document.createElement("button");
         prodDelete.type = "button";
         prodDelete.textContent = "X";
-        prodDelete.onclick = () => destroyProduct(id)
+        prodDelete.onclick = () => destroyProduct(id);
         tdDelete.appendChild(prodDelete);
         
         tr.append(tdImg, tdTitle, tdPrice, tdQuantity, tdDelete);
@@ -114,6 +131,11 @@ function productsHtml(){
         contenidoProductos.appendChild(tr);
 
     });
+    guardarLocalStorage();
+}
+
+function guardarLocalStorage(){
+    localStorage.setItem("productos", JSON.stringify(productosArray));
 }
 
 function actualizarCantidad (evento){
@@ -122,23 +144,25 @@ function actualizarCantidad (evento){
     // console.log(nuevaCantidad);
     const idProducto = parseInt(evento.target.dataset.id, 10);
     // console.log(idProducto);
-    const producto = productsArray.find(prod => prod.id === idProducto);
+    const producto = productosArray.find(prod => prod.id === idProducto);
 
     if (producto && nuevaCantidad > 0){
         producto.quantity = nuevaCantidad;
     }
-    productsHtml();
+    productosHtml();
     actualizarTotal();
+    guardarLocalStorage();
 }
 
 function destroyProduct(idProducto){
     // console.log("Delete...", idProducto)
-    productsArray = productsArray.filter(prod => prod.id !== idProducto);
-    // console.log(productsArray);
+    productosArray = productosArray.filter(prod => prod.id !== idProducto);
+    // console.log(productosArray);
     showAlert("El producto fue removido de su carrito", "success");
-    productsHtml()
+    productosHtml();
     actualizacionContadorCarrito();
     actualizarTotal();
+    guardarLocalStorage();
 }
 
 function cleanHtml(){

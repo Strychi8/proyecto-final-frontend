@@ -121,6 +121,8 @@ header h1:hover {
     transform: translateY(-10px);
 }
 
+/** Carrito de Compras**/
+
 .cart {
     display: none;
     position: absolute;
@@ -132,92 +134,85 @@ header h1:hover {
     padding: 1rem;
     border-radius: .8rem;
     z-index: 10;
-    @media (min-width: 1400px) {
-        right: -20rem;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart table thead {
+    border-bottom: 1px solid white;
+}
+
+.cart table thead th {
+    padding: 1rem;
+    color: #f7f8f9;
+}
+
+.cart table tbody tr {
+    padding: 1rem 0;
+}
+
+.cart table tbody td {
+    color: #f7f8f9;
+    padding: 1rem;
+}
+
+.cart table tbody img {
+    width: 5rem;
+}
+
+.cart table tbody p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.cart table tbody input {
+    width: 5rem;
+    background-color: transparent;
+    border: 1px solid #f7f8f9;
+    padding: .7rem;
+    color: #f7f8f9;
+    border-radius: .5rem;
+    &:focus,
+    &:active {
+        outline: none;
     }
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
+.cart table tbody button {
+    background-color: red;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    color: #f7f8f9;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-        thead {
-            th {
-                padding: 1rem;
-                color: #f7f8f9;
-            }
-            
-            border-bottom: 1px solid white;
-        }
+.cart table tfoot .total {
+    text-align: right;
+    padding-bottom: 1rem;
+}
 
-        tbody {
-            tr {
-                padding: 1rem 0;
-            }
-            td {
-                color: #f7f8f9;
-                padding: 1rem;
-                img {
-                    width: 3rem;
-                }
+tfoot .total .heading-total {
+    color: white;
+}
 
-                p {
-                    font-size: 1rem;
-                    font-weight: 400;
-                }
+tfoot .total .heading-total span {
+    margin-left: .5rem;
+    color: white;
+}
 
-                input {
-                    width: 5rem;
-                    background-color: transparent;
-                    border: 1px solid #f7f8f9;
-                    padding: .7rem;
-                    color: #f7f8f9;
-                    border-radius: .5rem;
-                    &:focus,
-                    &:active {
-                        outline: none;
-                    }
-                }
-
-                button {
-                    border: none;
-                    width: 3rem;
-                    height: 3rem;
-                    background-color: #dc2626;
-                    color: #f7f8f9;
-                    border-radius: 50%;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        tfoot {
-            .total {
-                text-align: right;
-                padding-bottom: 2rem;
-
-                .heading-total {
-                    color: white;
-                    span {
-                        margin-left: .5rem;
-                        color: white;
-                    }
-                }
-            }
-
-            td {
-                button {
-                    width: 100%;
-                    background-color: rgb(255, 255, 255, .75);
-                    padding: 1rem;
-                    border-radius: .5rem;
-                    cursor: pointer;
-                    color: white;
-                    font-weight: 700;
-                }
-            }
-        }
-    }
-    
+.cart table tfoot .vaciarCarrito {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    color: black;
+    font-weight: 700;
 }
 
 .btn-cart {
@@ -228,6 +223,8 @@ header h1:hover {
     display: block;
     opacity: 1;
 }
+
+/** Para dispositivos pequeños 600px **/
 
 .abrir-menu, 
 .cerrar-menu {
@@ -250,13 +247,13 @@ main h2 {
 
 /** Seccion Media **/
 
-.secciones-media h2{
+.seccion-media h2{
     margin-top: 2rem;
 }
 
 /** Seccion Sobre Nosotros **/
 
-.secciones-nosotros {
+.seccion-nosotros {
     background-image: url(../images/cafeteria-patrones-fisuras.avif);
     background-size: cover;
     background-position: center;
@@ -286,7 +283,7 @@ main h2 {
 
 /** Seccion Productos **/
 
-.secciones-producto {
+.seccion-productos {
    padding: 2rem 1rem;
 }
 
@@ -366,7 +363,7 @@ main h2 {
 
 /** Seccion Contacto **/
 
-.secciones-contacto {
+.seccion-contacto {
     margin-top: 4rem;   
 }
 

@@ -27,7 +27,7 @@
                
                <div class="btn-cart">
                     <button type="button"><i class="fa-solid fa-cart-shopping icon-cart"></i></button>  
-                    <span id="cartCount">0</span>
+                    <span id="contadorCarrito">0</span>
 
                     <div class="cart">
                         <div class="cart-responsive">
@@ -41,7 +41,7 @@
                                         <th>Accion</th>
                                     </tr>
                                 </thead>
-                                <tbody id="contentProducts">
+                                <tbody id="contenidoProductos">
                                    <!-- <tr>
                                         <td><img src="images/productos/maquina-de-espresso.jpg" alt=""></td>
                                         <td>
@@ -65,7 +65,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="5">
-                                            <button type="button" id="emptyCart">Vaciar Carrito</button>
+                                            <button class="vaciarCarrito" type="button" id="vaciarCarrito">Vaciar Carrito</button>
                                         </td>
                                     </tr>
                                 </tfoot>
@@ -81,7 +81,7 @@
 
     <main>
       <a id="nosotros"></a>
-      <section class="secciones-nosotros">
+      <section class="seccion-nosotros">
          <div class="sobre-nosotros">
             <h2>Sobre Nosotros</h2>
             <p>En 2025, Cafeteria Strychi nació del sueño de Tomas Strycharski de crear un espacio donde la comunidad pudiera disfrutar de los mejores granos de café, tostados con pasión y servidos con amor. Desde entonces, hemos crecido, pero nuestra dedicación a la excelencia y al arte de hacer café permanece inquebrantable.</p>
@@ -89,7 +89,7 @@
       </section>
 
 
-      <section class="secciones-media">
+      <section class="seccion-media">
         <h2> Tu playlist ideal para esos momentos de café y calma <h2>
      <!--   <iframe 
             width="360" 
@@ -117,7 +117,7 @@
       
       <!-- Productos -->
       <a id="productos"></a>
-      <section class="secciones-producto" id="listaProductos">
+      <section class="seccion-productos" id="listaProductos">
          <h2>Productos</h2>
          <div class="productos">
             <div class="producto">
@@ -197,7 +197,7 @@
       
       <!-- Reseñas -->
       <a id="resenias"></a>
-      <section class="secciones-resenia">
+      <section class="seccion-resenias">
          <h2>Reseñas</h2>
          <div class="resenias">
             <div class="card">
@@ -325,7 +325,7 @@
       
       <!-- Contacto -->
       <a id="contacto"></a>
-      <section class="secciones-contacto">        
+      <section class="seccion-contacto">        
             <form class="formContacto" action="https://formspree.io/f/xkgjlnkl" method="POST">
                <h2>Contacto</h2>
                <div class="inlineForm">
@@ -396,6 +396,7 @@
        <p class="p1">Todos los derechos reservados &copy; Cafeteria Strychi 2025.</p>
        <p class="p2">Hecho por <span>Tomas Strycharski</span>.</p>
    </footer>
-    <script src="./js/scripts.js"></script>
+
+   <script src="./js/scripts.js"></script>
 </body>
 </html>
