@@ -100,9 +100,132 @@ header h1:hover {
     color: #491404;
 }
 
+.nav-list .btn-cart button {
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    .icon-cart {
+        font-size: 1.6rem;
+        color:#491404;
+    } 
+}
+
+.nav-list .btn-cart span {   
+    color:#491404;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 .nav-list li:hover {
     transition: transform 0.2s ease-out;
     transform: translateY(-10px);
+}
+
+.cart {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    right: -1rem;
+    top: 3rem;
+    background-color: rgba(73, 44, 17, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: .8rem;
+    z-index: 10;
+    @media (min-width: 1400px) {
+        right: -20rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            th {
+                padding: 1rem;
+                color: #f7f8f9;
+            }
+            
+            border-bottom: 1px solid white;
+        }
+
+        tbody {
+            tr {
+                padding: 1rem 0;
+            }
+            td {
+                color: #f7f8f9;
+                padding: 1rem;
+                img {
+                    width: 3rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+
+                input {
+                    width: 5rem;
+                    background-color: transparent;
+                    border: 1px solid #f7f8f9;
+                    padding: .7rem;
+                    color: #f7f8f9;
+                    border-radius: .5rem;
+                    &:focus,
+                    &:active {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    border: none;
+                    width: 3rem;
+                    height: 3rem;
+                    background-color: #dc2626;
+                    color: #f7f8f9;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        tfoot {
+            .total {
+                text-align: right;
+                padding-bottom: 2rem;
+
+                .heading-total {
+                    color: white;
+                    span {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+
+            td {
+                button {
+                    width: 100%;
+                    background-color: rgb(255, 255, 255, .75);
+                    padding: 1rem;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    
+}
+
+.btn-cart {
+    position: relative;
+}
+
+.btn-cart:hover .cart {
+    display: block;
+    opacity: 1;
 }
 
 .abrir-menu, 
@@ -221,6 +344,11 @@ main h2 {
     cursor: pointer;
 }
 
+.producto-contenido .agregar-producto:hover {
+    background-color: #076e3e;
+    border: 1px solid #076e3e;
+}
+
 .producto-contenido .detalle {
     background-color: white;
     color: #685237;
@@ -228,6 +356,11 @@ main h2 {
     border-radius: 10px;
     border: 1px solid white;
     cursor: pointer;
+}
+
+.producto-contenido .detalle:hover {
+    background-color: rgb(204, 185, 185);
+    border: 1px solid rgb(204, 185, 185);
 }
 
 /** Seccion Contacto **/
@@ -379,9 +512,19 @@ footer a {
    text-decoration: none;
 }
 
-footer p {
+.p1 {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 4rem;
+}
+
+.p2 {
+    text-align: center;
+}
+
+footer span {
+    font-weight: bold;
+    font-family:cursive;
+    font-size:larger;
 }
 
 .footer-contenido h2 {

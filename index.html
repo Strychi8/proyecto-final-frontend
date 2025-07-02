@@ -24,7 +24,57 @@
                <li><a href="#productos"><i class="fa-solid fa-mug-hot"></i> Productos</a></li>
                <li><a href="#resenias"><i class="fa-solid fa-pen"></i> Reseñas</a></li>
                <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-               <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Icono de carrito de compras -->
+               
+               <div class="btn-cart">
+                    <button type="button"><i class="fa-solid fa-cart-shopping icon-cart"></i></button>  
+                    <span id="cartCount">0</span>
+
+                    <div class="cart">
+                        <div class="cart-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Descripcion</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="contentProducts">
+                                    <tr>
+                                        <td><img src="images/productos/maquina-de-espresso.jpg" alt=""></td>
+                                        <td>
+                                            Maquina de Espresso
+                                        </td>
+                                        <td>$15.000</td>
+                                        <td>
+                                            <input type="number" min="1">
+                                        </td>
+                                        <td>
+                                            <button type="button">X</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                    
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5" class="total">
+                                            <h4 class="heading-total">Total: <span id="total"></span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <button type="button" id="emptyCart">Vaciar Carrito</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                </div> 
+
             </ul>
          </nav>
     </header>
@@ -41,7 +91,7 @@
 
       <section class="secciones-media">
         <h2> Tu playlist ideal para esos momentos de café y calma <h2>
-        <iframe 
+     <!--   <iframe 
             width="360" 
             height="315"
             src="https://www.youtube.com/embed/m6SOJlkN1zU?si=wChkOLoOTOXZiiui" 
@@ -50,7 +100,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen
-        ></iframe>
+        ></iframe> -->
 
         <h2>Preparacion de un capuccino en 5 pasos sencillos</h2>
         <div class="video-container">
@@ -67,15 +117,15 @@
       
       <!-- Productos -->
       <a id="productos"></a>
-      <section class="secciones-producto">
+      <section class="secciones-producto" id="listaProductos">
          <h2>Productos</h2>
          <div class="productos">
             <div class="producto">
                <img src="images/productos/cafe-molido-lavirginia.jpg" alt="Foto de un paquete de cafe molido La Virginia">
                <div class="producto-contenido">
                   <h3>Cafe Molido La Virginia</h3>
-                  <span>$15000</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$15.000</span>
+                  <button class="agregar-producto" type="button" data-id="1">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -83,8 +133,8 @@
                <img src="images/productos/cafe-torrado-cabrales.jpg" alt="Foto de un paquete de cafe torrado Cabrales">
                <div class="producto-contenido">
                   <h3>Cafe Torrado Cabrales</h3>
-                  <span>$15000</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$15.000</span>
+                  <button class="agregar-producto" type="button" data-id="2">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -93,7 +143,7 @@
                <div class="producto-contenido">
                   <h3>Cafe Torrado Molido Morenita</h3>
                   <span>$17.200</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <button class="agregar-producto" type="button" data-id="3">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -101,8 +151,8 @@
                <img src="images/productos/morenita-tostado-colombia.jpg" alt="Foto de un paquete de cafe tostado Colombia molido">
                <div class="producto-contenido">
                   <h3>Café Tostado Colombia Molido</h3>
-                  <span>$13000</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$13.000</span>
+                  <button class="agregar-producto" type="button" data-id="4">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -110,8 +160,8 @@
                <img src="images/productos/molino-de-cafe.webp" alt="Foto de un paquete de cafe molido La Virginia">
                <div class="producto-contenido">
                   <h3>Molino de Cafe</h3>
-                  <span>$80000</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$80.000</span>
+                  <button class="agregar-producto" type="button" data-id="5">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -119,8 +169,8 @@
                <img src="images/productos/cafetera-hudson-aluminio-italiana-black.webp" alt="Foto de una cafetera Hudson italiana de aluminio negro">
                <div class="producto-contenido">
                   <h3>Cafetera Hudson Italiana</h3>
-                  <span>$26500</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$26.500</span>
+                  <button class="agregar-producto" type="button" data-id="6">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -128,8 +178,8 @@
                <img src="images/productos/cafetera-oster.webp" alt="Foto de una cafetera Oster color negro">
                <div class="producto-contenido">
                   <h3>Cafetera Oster Color Negro</h3>
-                  <span>$30800</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$30.800</span>
+                  <button class="agregar-producto" type="button" data-id="7">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -137,8 +187,8 @@
                <img src="images/productos/maquina-de-espresso.jpg" alt="Foto de una maquina de expresso">
                <div class="producto-contenido">
                   <h3>Maquina de Expresso</h3>
-                  <span>$170300</span>
-                  <button class="agregar-producto">Agregar producto</button>
+                  <span>$170.300</span>
+                  <button class="agregar-producto" type="button" data-id="8">Agregar producto</button>
                   <button class="detalle">Ver detalles</button>
                </div>
             </div>
@@ -343,7 +393,8 @@
         </div>
       </div> 
 
-       <p>Todos los derechos reservados &copy; Cafeteria Strychi 2025.</p>
+       <p class="p1">Todos los derechos reservados &copy; Cafeteria Strychi 2025.</p>
+       <p class="p2">Hecho por <span>Tomas Strycharski</span>.</p>
    </footer>
     <script src="./js/scripts.js"></script>
 </body>
