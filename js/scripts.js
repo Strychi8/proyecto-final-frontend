@@ -40,6 +40,13 @@ function selectData(producto){
         quantity: 1
     }
 
+    const exists = productsArray.some(producto => producto.id === productoObjeto.id);
+
+    if (exists){
+        showAlert("El producto ya existe en el carrito", "error");
+        return;
+    }
+
     // console.log(productoObjeto)
     productsArray = [...productsArray, productoObjeto];
     showAlert("El producto fue agregado a su carrito", "success");
@@ -82,8 +89,8 @@ function productsHtml(){
         const prodDelete = document.createElement("button");
         prodDelete.type = "button";
         prodDelete.textContent = "X";
+        prodDelete.onclick = () => destroyProduct(id)
         tdDelete.appendChild(prodDelete);
-
         
         tr.append(tdImg, tdTitle, tdPrice, tdQuantity, tdDelete);
 
@@ -91,6 +98,14 @@ function productsHtml(){
         contenidoProductos.appendChild(tr);
 
     });
+}
+
+function destroyProduct(idProducto){
+    // console.log("Delete...", idProducto)
+    productsArray = productsArray.filter(prod => prod.id !== idProducto);
+    // console.log(productsArray);
+    showAlert("El producto fue removido de su carrito", "success");
+    productsHtml()
 }
 
 function cleanHtml(){
