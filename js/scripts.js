@@ -11,6 +11,7 @@ cerrar.addEventListener("click", () => {
 })
 
 const listaProductos = document.querySelector("#listaProductos");
+const contenidoProductos = document.querySelector("#contentProducts");
 
 let productsArray = [];
 
@@ -42,6 +43,57 @@ function selectData(producto){
     // console.log(productoObjeto)
     productsArray = [...productsArray, productoObjeto];
     //showAlert
-    console.log(productsArray);
-    // productsHtml();
+    //console.log(productsArray);
+    productsHtml();
+}
+
+function productsHtml(){
+    cleanHtml();
+    productsArray.forEach(producto => {
+        const { img, title, price, quantity, id } = producto;
+
+        const tr = document.createElement("tr");
+
+        const tdImg = document.createElement("td");
+        const prodImg = document.createElement("img");
+        prodImg.src = img;
+        prodImg.alt = "Imagen del producto";
+        tdImg.appendChild(prodImg);
+
+        const tdTitle = document.createElement("td");
+        const prodTitle = document.createElement("p");
+        prodTitle.textContent = title;
+        tdTitle.appendChild(prodTitle);
+
+        const tdPrice = document.createElement("td");
+        const prodPrice = document.createElement("p");
+        prodPrice.textContent = `$${price.toFixed(3)}`;
+        tdPrice.appendChild(prodPrice);
+
+        const tdQuantity = document.createElement("td");
+        const prodQuantity = document.createElement("input");
+        prodQuantity.type = "number";
+        prodQuantity.min = "1";
+        prodQuantity.value = quantity;
+        prodQuantity.dataset.id = id;
+        tdQuantity.appendChild(prodQuantity);
+
+        const tdDelete = document.createElement("td");
+        const prodDelete = document.createElement("button");
+        prodDelete.type = "button";
+        prodDelete.textContent = "X";
+        tdDelete.appendChild(prodDelete);
+
+        
+        tr.append(tdImg, tdTitle, tdPrice, tdQuantity, tdDelete);
+
+        //console.log(tr);
+        contenidoProductos.appendChild(tr);
+
+    });
+}
+
+function cleanHtml(){
+    contenidoProductos.innerHTML = "";
+
 }
