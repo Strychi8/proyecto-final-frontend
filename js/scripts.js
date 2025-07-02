@@ -88,7 +88,8 @@ function productsHtml(){
 
         const tdPrice = document.createElement("td");
         const prodPrice = document.createElement("p");
-        prodPrice.textContent = `$${price.toFixed(3)}`;
+        const nuevoPrecio = price * quantity;
+        prodPrice.textContent = `$${nuevoPrecio.toFixed(3)}`;
         tdPrice.appendChild(prodPrice);
 
         const tdQuantity = document.createElement("td");
@@ -97,6 +98,7 @@ function productsHtml(){
         prodQuantity.min = "1";
         prodQuantity.value = quantity;
         prodQuantity.dataset.id = id;
+        prodQuantity.oninput = actualizarCantidad;
         tdQuantity.appendChild(prodQuantity);
 
         const tdDelete = document.createElement("td");
@@ -112,6 +114,21 @@ function productsHtml(){
         contenidoProductos.appendChild(tr);
 
     });
+}
+
+function actualizarCantidad (evento){
+    // console.log(evento.target);
+    const nuevaCantidad = parseInt(evento.target.value, 10);
+    // console.log(nuevaCantidad);
+    const idProducto = parseInt(evento.target.dataset.id, 10);
+    // console.log(idProducto);
+    const producto = productsArray.find(prod => prod.id === idProducto);
+
+    if (producto && nuevaCantidad > 0){
+        producto.quantity = nuevaCantidad;
+    }
+    productsHtml();
+    actualizarTotal();
 }
 
 function destroyProduct(idProducto){
