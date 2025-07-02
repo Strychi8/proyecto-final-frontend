@@ -42,7 +42,7 @@ function selectData(producto){
 
     // console.log(productoObjeto)
     productsArray = [...productsArray, productoObjeto];
-    //showAlert
+    showAlert("El producto fue agregado a su carrito", "success");
     //console.log(productsArray);
     productsHtml();
 }
@@ -95,5 +95,16 @@ function productsHtml(){
 
 function cleanHtml(){
     contenidoProductos.innerHTML = "";
+}
 
+function showAlert(message, type){
+    const nonRepeatAlert = document.querySelector(".alert");
+    if (nonRepeatAlert) nonRepeatAlert.remove();
+    const div = document.createElement("div");
+    div.classList.add("alert", type);
+    div.textContent = message;
+
+    document.body.appendChild(div);
+
+    setTimeout (() => div.remove(), 5000);
 }
