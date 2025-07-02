@@ -199,6 +199,7 @@ header h1:hover {
                     color: white;
                     span {
                         margin-left: .5rem;
+                        color: white;
                     }
                 }
             }
