@@ -30,7 +30,7 @@ function eventListeners(){
         actualizarTotal();
     })
 
-    const cargarProducto = localStorage.getItem("productos");
+    const cargarProducto = localStorage.getItem("productos"); // para recuperar datos almacenados
     if (cargarProducto){
         productosArray = JSON.parse(cargarProducto);
         productosHtml();

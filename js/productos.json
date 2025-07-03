@@ -1,0 +1,12 @@
+[
+    {"id": 1, "nombre": "Nescafe Gold", "precio": 11500},
+    {"id": 2, "nombre": "Nescafe Gold Espresso", "precio": 14500},
+    {"id": 3, "nombre": "Cafetera Prensa Francesa", "precio": 71500},
+    {"id": 4, "nombre": "Cafetera Hudson Italiana", "precio": 30500},
+    {"id": 5, "nombre": "Cafe Instantaneo Suave Dolca", "precio": 12500},
+    {"id": 6, "nombre": "Maquina de Cafe Mini", "precio": 50500},
+    {"id": 7, "nombre": "Pack de Tazas Artesanales", "precio": 39500},
+    {"id": 8, "nombre": "Cafetera de Filtro Smeg", "precio": 320500},
+    {"id": 9, "nombre": "Cafetera de Aluminio", "precio": 17500},
+    {"id": 10, "nombre": "Cafeteria Sr.Coffee", "precio": 400500}
+]
