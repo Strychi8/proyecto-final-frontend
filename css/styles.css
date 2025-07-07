@@ -764,7 +764,7 @@ footer span {
     .secciones-contacto {
         margin-top: 2rem;
         margin-bottom: 2rem;   
-    }
+    } 
 
     .formContacto {
         padding: 10px;
@@ -772,4 +772,34 @@ footer span {
         margin-bottom: 10px;
         width: 80%;
     }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .secciones-contacto {
+        margin-top: 2rem;
+        margin-bottom: 2rem;   
+    }   
+    
+    .formContacto {
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .secciones-contacto {
+        margin-top: 2rem;
+        margin-bottom: 2rem;   
+    }   
+    
+    .formContacto {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    
 }
