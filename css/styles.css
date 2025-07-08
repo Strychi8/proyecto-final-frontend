@@ -834,16 +834,16 @@ footer span {
     .alert {
         padding: 12px 22px;
         font-size: 1.1rem;
+    }
 
-        &.error {
-            background-color: #f44336 !important;
-            color: #fff !important;
-        } 
+    .alert &.error {
+        background-color: #f44336;
+        color: #fff;
+    } 
     
-        &.success {
-            background-color: #4caf50 !important;
-            color: #fff !important;
-        }
+    .alert &.success {
+        background-color: #4caf50;
+        color: #fff;
     }
 }
 
