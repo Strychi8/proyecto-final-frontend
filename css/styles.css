@@ -100,12 +100,12 @@ header h1:hover {
     color: #491404;
 }
 
-.nav-list .btn-cart button {
+.nav-list .btn-cart .btn-icono {
     border: none;
     background-color: unset;
     cursor: pointer;
     .icon-cart {
-        font-size: 1.4rem;
+        font-size: 20px;
         color:#491404;
     } 
 }
@@ -113,7 +113,7 @@ header h1:hover {
 .nav-list .btn-cart span {   
     color:#491404;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 .nav-list li:hover {
@@ -128,7 +128,7 @@ header h1:hover {
     position: absolute;
     opacity: 0;
     right: -1rem;
-    top: 3rem;
+    top: 2rem;
     background-color: rgba(73, 44, 17, 0.6);
     backdrop-filter: blur(5px);
     padding: 1rem;
@@ -165,14 +165,13 @@ header h1:hover {
 
 .cart table tbody p {
     font-size: 1rem;
-    font-weight: 400;
 }
 
 .cart table tbody input {
     width: 5rem;
     background-color: transparent;
     border: 1px solid #ebe7e6;
-    padding: .7rem;
+    padding: .6rem;
     color: #ebe7e6;
     border-radius: .5rem;
     &:focus,
@@ -182,7 +181,7 @@ header h1:hover {
 }
 
 .cart table tbody button {
-    background-color: red; /* no funciona */
+    background-color: red;
     border: none;
     width: 3rem;
     height: 3rem;
@@ -191,8 +190,8 @@ header h1:hover {
     cursor: pointer;
 }
 
-.cart table tbody button:hover{
-    background-color: red;
+.cart table tbody button:hover {
+    background-color: rgb(185, 30, 30);
 }
 
 .cart table tfoot .total {
@@ -214,6 +213,7 @@ tfoot .total .heading-total span {
     background-color: #ebe7e6;
     padding: 1rem;
     border-radius: .5rem;
+    border: 1px solid #ebe7e6;
     cursor: pointer;
     color: black;
     font-weight: 700;
@@ -676,6 +676,7 @@ footer span {
         bottom: 0;
         background-color:#cca370;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        font-size: 15px;
     }
     .nav.visible {
         opacity: 1;
@@ -688,33 +689,65 @@ footer span {
     .nav-list li a {
         color:#742812;
     }
-    /* Carrito de Compras */
-    .nav-list .btn-cart button {
+    
+    .nav-list .btn-cart .btn-icono {
         background-color: unset;
         cursor: pointer;
         .icon-cart {
-            font-size: 1.25rem;
+            font-size: 15px;
             color:#742812;
-    } 
+        } 
     }
-
     .nav-list .btn-cart span {   
-        color: #742812;
-        font-weight: 700;
-        font-size: 1.25rem;
+        font-size: 15px;
+        color:#742812;
     }
-    /* Sobre nosotros */
+    /** Carrito de Compras **/
+    .cart table thead th {
+        padding: 0.3rem;
+    }
+    .cart table tbody tr {
+        padding: 0.3rem 0;
+    }
+    .cart table tbody td {
+        padding: 0.3rem;
+    }
+    .cart table tbody img {
+        width: 2rem;
+    }
+    .cart table tbody p {
+        font-size: 0.8rem;
+    }
+    .cart table tbody input {
+        width: 3.5rem;
+        padding: .3rem;
+        border-radius: .5rem;
+    }
+    .cart table tbody button {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .cart table tfoot .total {
+        padding-bottom: 0.5rem;
+    }
+    tfoot .total .heading-total span {
+        margin-left: .6rem;
+    }
+    .cart table tfoot .vaciarCarrito {
+        padding: .5rem;
+    }
+    /** Sobre nosotros **/
     .sobre-nosotros p {
         font-style: normal;
         font-size: 20px;
         color:#685237;
         text-align: center;
     }
-    /* Media */
+    /** Media **/
     iframe {
         height: 200px; 
     }
-    /* Main */
+    /** Main **/
     main {
         padding: 2rem;
     }
@@ -722,7 +755,7 @@ footer span {
         margin-bottom: 1rem;
         font-size: 25px;
     }
-    /* Productos */
+    /** Productos **/
     .secciones-producto {
         padding: 1rem;
     }
@@ -731,7 +764,7 @@ footer span {
         padding: 1rem;
         max-width: 300px;      
     }
-    /* Contacto */
+    /** Contacto **/
     .secciones-contacto {
         margin-top: 2rem;
         margin-bottom: 2rem;   
@@ -743,13 +776,13 @@ footer span {
         margin-bottom: 10px;
         width: 90%;
     }
-    /* Boton Flotante */
+    /** Boton Flotante **/
     .btn-flotante {
 		padding: 15px 25px;
 		bottom: 20px;
 		right: 20px;
 	}
-    /* Footer */
+    /** Footer **/
     .footer-contenido h2 {
         font-size: 25px;
     }
@@ -760,7 +793,7 @@ footer span {
         color: #ebe7e6;
         font-size: 15px;
     }
-    /* Alertas */
+    /** Alertas **/
     .alert {
         padding: 12px 22px;
         font-size: 1.1rem;
@@ -773,16 +806,6 @@ footer span {
     
     .logo {
         max-width: 4rem;
-    }
-
-    header h1 {
-        font-size: 17px;
-    }
-
-    .nav {
-        padding: 5px 10%;
-        font-weight: bold;
-        font-size: 17px;
     }
 
     main {
