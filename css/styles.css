@@ -597,17 +597,16 @@ footer span {
     opacity: 0;
     animation: fadeInOut 5s ease forwards;
     font-size: 2rem;
+}
 
-    &.error {
-        background-color: #f44336;
-        color: #fff;
-    } 
-    
-    &.success {
-        background-color: #4caf50;
-        color: #fff;
-    }
+.alert.error {
+    background-color: #f44336;
+    color: #fff;
+}
 
+.alert.success {
+    background-color: #4caf50;
+    color: #fff;
 }
 
 /** Keyframes **/
@@ -836,12 +835,12 @@ footer span {
         font-size: 1.1rem;
     }
 
-    .alert &.error {
+    .alert.error {
         background-color: #f44336;
         color: #fff;
     } 
     
-    .alert &.success {
+    .alert.success {
         background-color: #4caf50;
         color: #fff;
     }
