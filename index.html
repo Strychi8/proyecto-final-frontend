@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="images/coffe-icon.png" type="image/png">
     <title>Cafeteria Strychi</title>
 
 </head>
 <body>
-    <header>
+   <header>
          <img class="logo" src="images/logo-cafe.jpg" alt="Logo de Cafe">
          <h1>Cafeteria Strychi</h1>
          <button class="abrir-menu" id="abrir"><i class="fa-solid fa-bars"></i></button>
@@ -77,9 +77,9 @@
 
             </ul>
          </nav>
-    </header>
+   </header>
 
-    <main>
+   <main>
       <a id="nosotros"></a>
       <section class="seccion-nosotros">
          <div class="sobre-nosotros">
@@ -91,7 +91,7 @@
 
       <section class="seccion-media">
         <h2> Tu playlist ideal para esos momentos de café y calma <h2>
-     <!--   <iframe 
+        <iframe 
             width="360" 
             height="315"
             src="https://www.youtube.com/embed/m6SOJlkN1zU?si=wChkOLoOTOXZiiui" 
@@ -100,7 +100,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen
-        ></iframe> -->
+        ></iframe>
 
         <h2>Preparacion de un capuccino en 5 pasos sencillos</h2>
         <div class="video-container">
@@ -126,7 +126,7 @@
                   <h3>Cafe Molido La Virginia</h3>
                   <span>$15.000</span>
                   <button class="agregar-producto" type="button" data-id="1">Agregar producto</button>
-                  <button class="detalle">Ver detalles</button>
+                  <button class="detalle" type="button">Ver detalles</button>
                </div>
             </div>
             <div class="producto">
@@ -347,7 +347,9 @@
                <button class="btn" type="submit">Enviar</button>
             </form>
       </section>
-    </main>
+   </main>
+
+   <a href="#" class="btn-flotante"><i class="fa-solid fa-arrow-up"></i></a>
 
    <footer>
       <div class="footer-contenido">
@@ -398,5 +400,6 @@
    </footer>
 
    <script src="./js/scripts.js"></script>
+
 </body>
 </html>
