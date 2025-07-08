@@ -104,10 +104,11 @@ header h1:hover {
     border: none;
     background-color: unset;
     cursor: pointer;
-    .icon-cart {
-        font-size: 20px;
-        color:#491404;
-    } 
+}
+
+.nav-list .btn-cart .btn-icono .icon-cart {
+    font-size: 20px;
+    color:#491404;
 }
 
 .nav-list .btn-cart span {   
@@ -635,6 +636,7 @@ footer span {
 /* Estilos para pantallas pequeñas (menos de 600px) */
 
 @media screen and (max-width: 600px){
+
     .abrir-menu, 
     .cerrar-menu {
         display: block;
@@ -661,7 +663,9 @@ footer span {
         transform: none;
         cursor: pointer;
     } 
- 
+
+    /** Nav **/
+
     .nav {
         opacity: 0;
         visibility: hidden;
@@ -673,97 +677,122 @@ footer span {
         top: 0;
         right: 0;
         padding: 2rem;
-        bottom: 0;
+      
         background-color:#cca370;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         font-size: 15px;
     }
+
     .nav.visible {
         opacity: 1;
         visibility: visible;
     }
+
     .nav-list {
         flex-direction: column;
         align-items: end;
     }
+
     .nav-list li a {
         color:#742812;
-    }
-    
+    }    
+
     .nav-list .btn-cart .btn-icono {
         background-color: unset;
         cursor: pointer;
-        .icon-cart {
-            font-size: 15px;
-            color:#742812;
-        } 
     }
+
+    .nav-list .btn-cart .btn-icono .icon-cart {
+        font-size: 15px;
+        color:#742812;
+    }
+
     .nav-list .btn-cart span {   
         font-size: 15px;
         color:#742812;
     }
     /** Carrito de Compras **/
+
     .cart table thead th {
         padding: 0.3rem;
     }
+
     .cart table tbody tr {
         padding: 0.3rem 0;
     }
+
     .cart table tbody td {
         padding: 0.3rem;
     }
+
     .cart table tbody img {
         width: 2rem;
     }
+
     .cart table tbody p {
         font-size: 0.8rem;
     }
+
     .cart table tbody input {
-        width: 3.5rem;
+        width: 4rem;
         padding: .3rem;
         border-radius: .5rem;
     }
+
     .cart table tbody button {
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 2rem;
+        height: 2rem;
     }
+
     .cart table tfoot .total {
         padding-bottom: 0.5rem;
     }
+
     tfoot .total .heading-total span {
         margin-left: .6rem;
     }
+
     .cart table tfoot .vaciarCarrito {
         padding: .5rem;
     }
+
     /** Sobre nosotros **/
+
     .sobre-nosotros p {
         font-style: normal;
         font-size: 20px;
         color:#685237;
         text-align: center;
     }
+
     /** Media **/
+
     iframe {
         height: 200px; 
     }
+
     /** Main **/
+
     main {
         padding: 2rem;
     }
+
     main h2 {
         margin-bottom: 1rem;
         font-size: 25px;
     }
+
     /** Productos **/
+
     .secciones-producto {
         padding: 1rem;
     }
+
     .productos {
         margin-top: 1rem;
         padding: 1rem;
         max-width: 300px;      
     }
+
     /** Contacto **/
     .secciones-contacto {
         margin-top: 2rem;
@@ -776,27 +805,45 @@ footer span {
         margin-bottom: 10px;
         width: 90%;
     }
+
     /** Boton Flotante **/
+
     .btn-flotante {
 		padding: 15px 25px;
 		bottom: 20px;
 		right: 20px;
 	}
+
     /** Footer **/
+
     .footer-contenido h2 {
         font-size: 25px;
     }
+
     .footer-contenido-interno {
         flex-wrap: nowrap;
     }
+
     footer span {
         color: #ebe7e6;
         font-size: 15px;
     }
+
     /** Alertas **/
+
     .alert {
         padding: 12px 22px;
         font-size: 1.1rem;
+
+        &.error {
+            background-color: #f44336 !important;
+            color: #fff !important;
+        } 
+    
+        &.success {
+            background-color: #4caf50 !important;
+            color: #fff !important;
+        }
     }
 }
 
@@ -842,6 +889,7 @@ footer span {
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     /* Contacto */
+
     .secciones-contacto {
         margin-top: 2rem;
         margin-bottom: 2rem;   
@@ -858,6 +906,7 @@ footer span {
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     /* Alertas */
+
     .alert {
         padding: 17px 27px;
         font-size: 1.5rem;
@@ -866,6 +915,7 @@ footer span {
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     /* Contacto */
+
     .secciones-contacto {
         margin-top: 2rem;
         margin-bottom: 2rem;   

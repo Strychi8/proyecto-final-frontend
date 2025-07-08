@@ -113,6 +113,8 @@ function productosHtml(){
         const prodQuantity = document.createElement("input");
         prodQuantity.type = "number";
         prodQuantity.min = "1";
+        prodQuantity.max = "20";
+        prodQuantity.step = "1";
         prodQuantity.value = quantity;
         prodQuantity.dataset.id = id;
         prodQuantity.oninput = actualizarCantidad;
